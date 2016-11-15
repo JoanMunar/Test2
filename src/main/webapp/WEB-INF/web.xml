@@ -7,10 +7,8 @@
 
     <context-param>
         <param-name>file-upload</param-name>
-        <param-value>
-            c:\apache-tomcat-5.5.29\webapps\data\
-        </param-value>
-        <description>Location to store uploaded file</description>
+        <param-value>/home/jmunarb/apache-tomcat-8.5.6/webapps/data/</param-value>
+        <description>/home/jmunarb/Escriptori/prova</description>
     </context-param>
 
     <servlet>

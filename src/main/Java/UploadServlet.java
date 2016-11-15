@@ -47,7 +47,7 @@ public class UploadServlet extends HttpServlet {
         // maximum size that will be stored in memory
         factory.setSizeThreshold(maxMemSize);
         // Location to save data that is larger than maxMemSize.
-        factory.setRepository(new File("c:\\temp"));
+        factory.setRepository(new File(filePath));
 
         // Create a new file upload handler
         ServletFileUpload upload = new ServletFileUpload(factory);
