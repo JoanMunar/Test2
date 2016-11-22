@@ -5,12 +5,12 @@
     <body>
         <h3>File Upload:</h3>
         <br/>
-        <form action="fileupload.jsp" method="post" enctype="multipart/form-data">
+        <form action="LogIn" method="GET">
             <p>Email:</p>
             <input type="email" name="email">
             <br/>
             <p>Password:</p>
-            <input type="password" name="passwrd">
+            <input type="password" name="password">
                            <input type="submit">
         </form>
     </body>

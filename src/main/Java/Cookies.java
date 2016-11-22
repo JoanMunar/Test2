@@ -40,5 +40,7 @@ public class Cookies extends HttpServlet {
                 + request.getParameter("password") + "\n" +
                 "</ul>\n" +
                 "</body></html>");
+
+
     }
 }
