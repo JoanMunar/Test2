@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <html>
     <head>
         <title>File Uploading Form</title>
@@ -5,7 +6,7 @@
     <body>
         <h3>File Upload:</h3>
         <br/>
-        <form action="LogIn" method="GET">
+        <form action="LogIn" method="POST">
             <p>Email:</p>
             <input type="email" name="email">
             <br/>
