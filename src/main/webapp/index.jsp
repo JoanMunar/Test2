@@ -12,7 +12,10 @@
             <br/>
             <p>Password:</p>
             <input type="password" name="password">
-                           <input type="submit">
+            <input type="checkbox" name="box" value="cookie">
+            Remember me
+            <br/>
+            <input type="submit">
         </form>
     </body>
 </html>
