@@ -11,6 +11,6 @@
             <br />
             <input type="submit" value="Upload File" />
         </form>
-        <button>LogOut</button>
+        <button>Out</button>
     </body>
 </html>
