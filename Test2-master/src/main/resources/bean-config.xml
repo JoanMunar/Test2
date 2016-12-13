@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <bean id="user1" class="Logs.User">
+        <constructor-arg value="joan"/>
+        <constructor-arg value="1234"/>
+        <constructor-arg value="joan@gmail.com"/>
+    </bean>
+    <bean id="user2" class="Logs.User">
+        <constructor-arg value="xavi"/>
+        <constructor-arg value="1234"/>
+        <constructor-arg value="xavi@gmail.com"/>
+    </bean>
+    <bean id="user3" class="Logs.User">
+        <constructor-arg value="pep"/>
+        <constructor-arg value="1234"/>
+        <constructor-arg value="pep@gmail.com"/>
+    </bean>
+
+    <bean id="llista" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="user1"></ref>
+                <ref bean="user2"></ref>
+                <ref bean="user3"></ref>
+            </list>
+        </constructor-arg>
+    </bean>
+
+</beans>

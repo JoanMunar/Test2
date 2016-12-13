@@ -1,0 +1,107 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+    <!-- Direccio on es pujara l'arxiu -->
+    <context-param>
+        <param-name>file-upload</param-name>
+        <param-value>/home/jmunarb/apache-tomcat-8.5.6/webapps/data/</param-value>
+        <description>/home/jmunarb/Escriptori/prova</description>
+    </context-param>
+
+    <!-- Filtre d'autentifiacio com usuari -->
+    <filter>
+        <filter-name>Filters.LogFilter</filter-name>
+        <filter-class>Filters.LogFilter</filter-class>
+        <init-param>
+            <param-name>test-param</param-name>
+            <param-value>Initialization Paramter</param-value>
+        </init-param>
+    </filter>
+
+    <!-- Filtres d'autentificacio com usuari (Mappings) -->
+    <!-- Filters.LogFilter -->
+    <filter-mapping>
+        <filter-name>Init Page</filter-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </filter-mapping>
+
+    <!-- Files Servlet -->
+    <filter-mapping>
+        <filter-name>Files</filter-name>
+        <url-pattern>/Servlet.Files</url-pattern>
+    </filter-mapping>
+
+    <!-- Upload Servlet -->
+    <filter-mapping>
+        <filter-name>UploadServlet</filter-name>
+        <url-pattern>/Servlet.UploadServlet</url-pattern>
+    </filter-mapping>
+
+    <!-- Tancar Sessio -->
+    <filter-mapping>
+        <filter-name>LogOut</filter-name>
+        <url-pattern>/Logs.LogOut</url-pattern>
+    </filter-mapping>
+
+    <!-- Servlets -->
+
+    <!-- Upload Servlet -->
+    <servlet>
+        <servlet-name>Servlet.UploadServlet</servlet-name>
+        <servlet-class>Servlet.UploadServlet</servlet-class>
+    </servlet>
+
+    <!-- Iniciar Sessio -->
+    <servlet>
+        <servlet-name>Logs.LogIn</servlet-name>
+        <servlet-class>Logs.LogIn</servlet-class>
+    </servlet>
+
+    <!-- Files Servlet -->
+    <servlet>
+        <servlet-name>Files</servlet-name>
+        <servlet-class>Servlet.Files</servlet-class>
+    </servlet>
+
+    <!-- Tancar Sessio -->
+    <servlet>
+        <servlet-name>LogOut</servlet-name>
+        <servlet-class>Logs.LogOut</servlet-class>
+    </servlet>
+
+    <!-- Servlet Mappings -->
+
+    <!-- Upload Servlet -->
+    <servlet-mapping>
+        <servlet-name>Servlet.UploadServlet</servlet-name>
+        <url-pattern>/Servlet.UploadServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Iniciar Sessio -->
+    <servlet-mapping>
+        <servlet-name>Logs.LogIn</servlet-name>
+        <url-pattern>/Logs.LogIn</url-pattern>
+    </servlet-mapping>
+
+    <!-- Files Servlet -->
+    <servlet-mapping>
+        <servlet-name>Files</servlet-name>
+        <url-pattern>/Servlet.Files</url-pattern>
+    </servlet-mapping>
+
+    <!-- Tancar Sessio -->
+    <servlet-mapping>
+        <servlet-name>LogOut</servlet-name>
+        <url-pattern>/Servlet.LogOut</url-pattern>
+    </servlet-mapping>
+
+    <!-- Configuracio de l'usuari per a que duri 15 minuts-->
+    <session-config>
+        <session-timeout>15</session-timeout>
+    </session-config>
+
+
+</web-app>
